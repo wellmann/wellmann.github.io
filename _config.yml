@@ -1,0 +1,41 @@
+# Custom settings
+author: Kevin Wellmann
+description: Kevin Wellmann - Web developer from Germany
+repository: https://github.com/wellmann/wellmann.github.io
+title: Kevin Wellmann - Web Developer
+url: https://kevin.wellmann.io
+email: hello@wellmann.io
+
+# Contact buttons
+buttons:
+  - title: Say hi
+    link: mailto:hello@wellmann.io?subject=hi
+    
+  - title: Github
+    link: https://github.com/wellmann
+    
+  - title: Xing
+    link: https://www.xing.com/profile/Kevin_Wellmann
+
+# Handling Reading
+safe: true
+exclude:
+  - node_modules
+  - CNAME
+  - package.json
+  - package-lock.json
+  - Vagrantfile
+
+# Plugins
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+# SASS
+sass:
+    sass_dir: assets/css
+    style: compressed
+
+# Markdown Processors
+kramdown:
+  auto_ids: false

@@ -1,0 +1,10 @@
+//
+// Header styles
+// @author Kevin Wellmann
+//
+
+.site-header {
+  @include brick-wall($body-background-secondary);
+  padding-top: 47px;
+  padding-bottom: 47px;
+}

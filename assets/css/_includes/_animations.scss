@@ -1,0 +1,53 @@
+//
+// Keyframe animations
+// @author Kevin Wellmann
+//
+
+@keyframes fade-in {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  40% {
+    opacity: .1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// @link http://codepen.io/nodws/pen/bdjwn
+@keyframes neon-sign-defunct {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #1d1d1d;
+  }
+  80% {
+
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #1d1d1d;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #1d1d1d;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}

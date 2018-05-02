@@ -1,0 +1,79 @@
+//
+// Custom mixins / functions
+// @author Kevin Wellmann
+//
+
+@mixin brick-wall($color) {
+  // @link http://lea.verou.me/css3patterns/#bricks
+  background-image: linear-gradient(336deg, darken($color, 1%) 23px, transparent 23px),
+    linear-gradient(156deg, $color 23px, transparent 23px),
+    linear-gradient(336deg, $color 23px, transparent 23px),
+    linear-gradient(156deg, $color 23px, transparent 23px);
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+@mixin neon-sign($color, $text-color: lighten($color, 20%)) {
+  // @link http://codepen.io/nodws/pen/bdjwn
+  color: $text-color;
+  text-shadow: 0 -4px 100px, 0 0 2px,
+    0 0 1em rgba($color, .4),
+    0 0 0.5em rgba($color, .4),
+    0 0 0.1em rgba($color, .4),
+    0 5px 3px #000;
+}
+
+@mixin display-font($size: $font-size-base) {
+  font-family: 'North', sans-serif;
+  font-size: $size;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+@mixin film-noir-filter() {
+  filter: grayscale(100%)
+    contrast(200%)
+    brightness(50%);
+  filter: gray; // IE 9
+}
+
+@mixin button() {
+  background: none;
+  border: 0;
+  appearance: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+@mixin close-icon($size) {
+  position: relative;
+  width: $size;
+  height: $size;
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background: $link-hover-color;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: ($size / 2);
+    width: 2px;
+    height: $size;
+    background: $link-color;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

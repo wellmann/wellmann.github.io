@@ -1,0 +1,13 @@
+{
+  "name": "wellmann.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wellmann/wellmann.github.io.git"
+  },
+  "author": "Kevin Wellmann"
+}

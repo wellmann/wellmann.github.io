@@ -1,0 +1,15 @@
+---
+layout: compress
+---
+
+{% include partials/head.html %}
+<body class="page-{{ page.name | remove: '.md' }}">
+  {% include partials/header.html %}
+  <main class="site-main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  {% include partials/footer.html %}
+</body>
+</html>

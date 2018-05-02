@@ -1,0 +1,43 @@
+//
+// Logo styles
+// @author Kevin Wellmann
+//
+
+.logo {
+  text-align: center;
+  white-space: nowrap;
+  cursor: default;
+  user-select: none;
+  -webkit-touch-callout: none;
+  transform: scale(.85);
+
+  @media(min-width: $screen-sm-min) {
+    transform: scale(1);
+  }
+
+  a {
+    display: inline-block;
+  }
+}
+
+.logo__title {
+  @include display-font(22.5px);
+}
+
+.logo__subtitle {
+  font: 39px/1.2 'Pacifico', cursive;
+  letter-spacing: .06em;
+  text-indent: -.25em;
+}
+
+.neon-sign {
+  @include neon-sign($body-color-primary, $body-color-primary);
+
+  a:focus & {
+    @include neon-sign($brand-highlight, $link-hover-color);
+  }
+}
+
+.neon-sign__defunct {
+  animation: neon-sign-defunct linear infinite 2s;
+}

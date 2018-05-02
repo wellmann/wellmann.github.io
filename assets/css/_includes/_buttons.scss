@@ -1,0 +1,71 @@
+//
+// Button styles
+// @author Kevin Wellmann
+//
+
+.button-group {
+  margin: 0 auto;
+  text-align: center;
+
+  > .button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-sm-min) {
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.button {
+  @include display-font(.8em);
+  position: relative;
+  width: 100%;
+  padding: 12px 24px;
+  border: 1px solid $body-color-secondary;
+  border-radius: 3px;
+  color: $link-color;
+  text-align: center;
+
+  @media (min-width: $screen-sm-min) {
+    width: auto;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% + 10px);
+    border: inherit;
+    border-radius: inherit;
+  }
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+.button--github {
+  &:hover,
+  &:focus {
+    color: lighten(#6e5494, 25%);
+  }
+}
+
+.button--xing {
+  &:hover,
+  &:focus {
+    color: lighten(desaturate(#cfdc00, 5%), 35%);
+  }
+}
+
+.button--linkedin {
+  &:hover,
+  &:focus {
+    color: desaturate(lighten(#0077b5, 40%), 40%);
+  }
+}
