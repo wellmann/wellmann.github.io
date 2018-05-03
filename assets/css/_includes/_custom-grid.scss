@@ -17,8 +17,8 @@ $screen-is-max: 675px;
 $screen-xs-max: ($screen-is-min - 1);
 
 @import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables",
-        "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework",
-        "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/responsive-visibility";
+        "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix",
+        "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
 
 $container-lg: $container-md;
 
@@ -29,59 +29,19 @@ $screen-sm-min: ($screen-is-max + 1);
 //
 // Set the container width, and override it for fixed navbars in media queries.
 .container {
+  @include container-fixed;
+
   @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
     width: $container-is;
   }
-}
 
-// Function that creates the custom grid
-// Intermediate small grid
-@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
-  @include make-grid(is);
-}
-
-// Add visibility "visible-is" class for the custom grid
-@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
-  @include responsive-visibility('.visible-is');
-}
-
-// Add hidden "hidden-is" class for the custom grid
-@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
-  @include responsive-invisibility('.hidden-is');
-}
-
-// Define the "visible-is" class as hidden in all other grid widths (Except in the custom grid).
-@media (min-width: $screen-sm-min) {
-  @include responsive-invisibility('.visible-is');
-}
-
-@media (max-width: $screen-xs-max) {
-  @include responsive-invisibility('.visible-is');
-}
-
-// Generate the is columns
-@mixin make-is-column($columns, $gutter: $grid-gutter-width) {
-    position: relative;
-    min-height: 1px;
-    padding-left: ($gutter / 2);
-    padding-right: ($gutter / 2);
-    @media (min-width: $screen-is) {
-        float: left;
-        width: percentage(($columns / $grid-columns));
-    }
-}
-@mixin make-is-column-offset($columns) {
-    @media (min-width: $screen-is-min) {
-        margin-left: percentage(($columns / $grid-columns));
-    }
-}
-@mixin make-is-column-push($columns) {
-    @media (min-width: $screen-is-min) {
-        left: percentage(($columns / $grid-columns));
-    }
-}
-@mixin make-is-column-pull($columns) {
-    @media (min-width: $screen-is-min) {
-        right: percentage(($columns / $grid-columns));
-    }
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
 }

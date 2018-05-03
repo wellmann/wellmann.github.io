@@ -62,27 +62,7 @@ button {
   }
 }
 
-.site-nav {
-  @include display-font();
-  padding-top: 47px;
-  padding-bottom: 47px;
-  background: $body-bg;
-  text-align: center;
-}
-
-.site-nav__link {
-  margin-left: 20px;
-
-  &:first-child {
-    margin-left: 0;
-  }
-}
-
 .site-main {
   padding-top: $section-spacing;
   padding-bottom: $section-spacing;
-  
-  .site-nav + & {
-    padding-top: 0;
-  }
 }
