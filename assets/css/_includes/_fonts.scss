@@ -10,6 +10,7 @@
   font-family: 'North';
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/north-regular-webfont.woff2') format('woff2'),
-    url('../fonts/north-regular-webfont.woff') format('woff');
+  font-display: swap;
+  src: url('/assets/fonts/north-regular-webfont.woff2') format('woff2'),
+    url('assets/fonts/north-regular-webfont.woff') format('woff');
 }

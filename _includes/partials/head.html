@@ -17,5 +17,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="/assets/fonts/north-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="canonical" href="{{ site.url ~ page.url }}">
-  <link rel="stylesheet" href="/assets/css/styles.css?v={{ 'now' | date: '%j%M%S' }}">
+  <style>
+  {% capture inline_scss %}
+    {% include assets/styles.scss %}
+  {% endcapture %}
+  {{ inline_scss | scssify }}
+  </style>
 </head>
