@@ -6,10 +6,6 @@ unless Vagrant.has_plugin?("vagrant-hostmanager")
   raise 'vagrant-hostmanager plugin required!'
 end
 
-unless Vagrant.has_plugin?("vagrant-triggers")
-  raise 'vagrant-triggers plugin required!'
-end
-
 # Vagrant config
 Vagrant.configure("2") do |config|
 
@@ -45,13 +41,13 @@ Vagrant.configure("2") do |config|
       apt-get -y install nodejs
     SHELL
 
-    config.trigger.after [:up] do
-        run_remote "iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 4000"
-        run_remote  "cd /vagrant && jekyll serve --watch --force_polling --host=0.0.0.0"
+    config.trigger.after [:up] do |trigger|
+        trigger.run_remote = {inline: "iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 4000"}
+        trigger.run_remote = {inline: "cd /vagrant && jekyll serve --watch --force_polling --host=0.0.0.0"}
     end
 
-    config.trigger.before [:suspend, :halt] do
-        run_remote  "killall -9 jekyll"
+    config.trigger.before [:suspend, :halt] do |trigger|
+      trigger.run_remote = {inline: "killall -9 jekyll"}
     end
 
 end
