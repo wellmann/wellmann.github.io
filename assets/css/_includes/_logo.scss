@@ -31,7 +31,7 @@
 }
 
 .neon-sign {
-  @include neon-sign($body-color-primary, $body-color-primary);
+  @include neon-sign(#eee, #eee);
 
   a:focus & {
     @include neon-sign($brand-highlight, $link-hover-color);
