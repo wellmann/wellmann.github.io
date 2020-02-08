@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website",
   "dependencies": {
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.4.1"
   },
   "repository": {
     "type": "git",
