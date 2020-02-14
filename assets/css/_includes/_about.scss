@@ -1,0 +1,109 @@
+//
+// About section styles
+// @author Kevin Wellmann
+//
+
+.about {
+  display: grid;
+  grid-column-gap: 5%;
+
+  @media (min-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr 350px;
+
+    h2 {
+      grid-column: span 2;
+    }
+  }
+}
+
+.bio {
+  padding-bottom: $section-spacing;
+
+  p {
+    animation: fade-in .9s;
+  }
+}
+
+.resume {
+  padding-bottom: $section-spacing;
+  justify-self: center;
+  
+  @media (min-width: $mobile-breakpoint) {
+    justify-self: end;
+  }
+}
+
+.resume__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 25%;
+    width: 30px;
+    top: -30px;
+    height: 30px;
+    background: linear-gradient(to top, $background 0%, rgba($background, 0) 100%);
+  }
+}
+
+.resume__item  {
+  display: flex;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 114px;
+    width: 5px;
+    height: 100%;
+    border-right: 1px double $background-light-contrast;
+    border-left: 1px double $background-light-contrast;
+  }
+}
+
+.resume__period {
+  @include display-font(.8em);
+  position: relative;
+  min-width: 130px;
+  padding-right: 30px;
+  color: $color;
+  text-align: right;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 15px;
+    height: 15px;
+    background-color: $background;
+    border: 1px solid $background-light-contrast;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px $background;
+  }
+}
+
+.resume__details {
+  margin-bottom: 30px;
+  padding-left: 2px;
+
+  .resume__item:last-child & {
+    margin-bottom: 0;
+  }
+
+  span {
+    @include display-font(.8em);
+    color: $background-light-contrast;
+  }
+
+  p {
+    margin: 0;
+    animation: fade-in .9s;
+  }
+}

@@ -3,22 +3,12 @@
 // @author Kevin Wellmann
 //
 
-$brand-highlight: #f6d980;
-$body-background-primary: #111;
-$body-background-secondary: #1d1d1d;
-$body-color-primary: #c3c3c3;
-$body-color-secondary: #555;
+$background-secondary: #1d1d1d;
 
+$background: #111;
+$background-light-contrast: #555;
+$color: #c3c3c3;
+$color-highlight: #f6d980;
+
+$mobile-breakpoint: 880px;
 $section-spacing: 80px;
-
-// Bootstrap overrides
-$body-bg: $body-background-primary;
-$font-family-base: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-size-base: 14px;
-$font-size-h2: 1.6em;
-$font-size-h3: 1.2em;
-$text-color: $body-color-primary;
-$line-height-base: 1.7;
-$link-color: $body-color-primary;
-$link-hover-color: lighten($brand-highlight, 10%);
-$link-hover-decoration: none;

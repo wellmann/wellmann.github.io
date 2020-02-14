@@ -4,7 +4,7 @@
 //
 
 body.page-404 {
-  @include brick-wall($body-background-secondary);
+  @include brick-wall($background-secondary);
 }
 
 .error {

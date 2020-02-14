@@ -4,45 +4,39 @@
 //
 
 .site-footer {
+  @include display-font(10px);
   padding-top: ($section-spacing / 2);
   padding-bottom: ($section-spacing / 2);
-  background: $body-background-secondary;
-  color: $body-color-primary;
+  background: $background-secondary;
+  color: $color;
 }
 
-.imprint {
-  @include display-font(10px);
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: hidden;
-}
-
-.imprint__item {
+.site-footer__item {
   margin-top: 15px;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  overflow-x: hidden;
 
   &::before {
     content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
     float: left;
     width: 0;
-    color: $body-color-secondary;
+    color: $background-light-contrast;
     white-space: nowrap;
   }
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   > span {
-    background: $body-background-secondary;
-  }
+    background: $background-secondary;
 
-  > span:first-child {
-    padding-right: 1em;
-  }
+    &:first-child {
+      padding-right: 1em;
+    }
 
-  > span + span {
-    float: right;
-    padding-left: 1em;
+    &:last-child {
+      float: right;
+      padding-left: 1em;
+    }
   }
 }

@@ -4,7 +4,7 @@
 //
 
 .site-header {
-  @include brick-wall($body-background-secondary);
+  @include brick-wall($background-secondary);
   padding-top: 47px;
   padding-bottom: 47px;
 }

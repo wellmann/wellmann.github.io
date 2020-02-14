@@ -21,6 +21,10 @@
     0 0 0.5em rgba($color, .4),
     0 0 0.1em rgba($color, .4),
     0 5px 3px #000;
+
+    span {
+      animation: neon-sign-defunct linear infinite 2s;
+    }
 }
 
 @mixin display-font($size: $font-size-base) {
@@ -54,7 +58,7 @@
   &:focus {
     &::before,
     &::after {
-      background: $link-hover-color;
+      background: $color-highlight;
     }
   }
 
