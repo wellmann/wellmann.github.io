@@ -1,8 +1,8 @@
 # Custom settings
 author: Kevin Wellmann
-description: Kevin Wellmann - Web developer from Germany
 repository: https://github.com/wellmann/wellmann.github.io
 title: Kevin Wellmann - Web Developer
+description: Hey there, I’m Kevin a web developer from Germany. My framework of choice is WordPress with which I am building custom tailored solutions.
 url: https://kevin.wellmann.io
 email: hello@wellmann.io
 
@@ -16,6 +16,9 @@ buttons:
     
   - title: Xing
     link: https://www.xing.com/profile/Kevin_Wellmann
+  
+  - title: LinkedIn
+    link: https://linkedin.com/in/kevin-wellmann-6b7819192
 
 # Handling Reading
 safe: true

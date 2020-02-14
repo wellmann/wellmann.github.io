@@ -6,4 +6,5 @@ permalink: /
 ---
 
 Hey there,  
-I’m Kevin a web developer from Bremen, Germany. I have built websites ranging from small, through shop systems, to larger applications. My framework of choice is WordPress with which I’m building custom tailored solutions. Besides being a front and back end developer I’m also passionate about website architecture and UX. Challenging projects motivate me to keep up to date with the latest technologies as well as workflows and project management techniques to optimize productivity.
+I’m Kevin a web developer from Germany. My framework of choice is WordPress with which I am building custom tailored solutions. Some of my work at various agencies include a web shop for insurance products with a complex premium calculation that is build on top of WooCommerce, a plugin to manage franchisees dynamically generated landing pages from imported data and an online video archive with a YouTube integration for a national broadcaster.  
+When not doing back end development I like playing with Preact and the WordPress REST API.
